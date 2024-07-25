@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.product, .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.product img  {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+button, a {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.total {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.cart-item {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.cart-item.fade-in {
+    opacity: 1;
+}
+
+.cart-icon {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.cart-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.cart-icon img:hover{
+    animation-name: anime;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#cart-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 18px;
+    
+}
+
+#cart-count:hover {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes anime {
+    0% {
+        transform: rotate(0deg);
+        /*move right*/
+        margin-right: 0;
+    }
+    50% {
+        transform: rotate(180deg);
+        /*move left*/
+        margin-right: 20px;
+    }
+    100% {
+        transform: rotate(360deg);
+        /*move right*/
+        margin-right: 0;
+    }
+}
+
+
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
